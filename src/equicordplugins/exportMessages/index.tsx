@@ -54,7 +54,7 @@ function formatMessage(message: Message) {
 
 async function exportMessage(message: Message) {
     const timestamp = new Date(message.timestamp.toString()).toISOString().split("T")[0];
-    const filename = `message-${message.channel_id}-${timestamp}.txt`;
+    const filename = `message-${message.id}-${timestamp}.txt`;
 
     const content = formatMessage(message);
 
